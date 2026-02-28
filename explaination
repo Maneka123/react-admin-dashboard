@@ -37,3 +37,7 @@ Header.js → top bar, static info like app title or user info.
 
 009
 change the main.js to render react components
+
+010
+make sure your project is ready for production
+npm run build
