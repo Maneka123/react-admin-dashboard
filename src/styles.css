@@ -9,23 +9,26 @@ padding: 0;
 box-sizing: border-box; 
 font-family: "Poppins", sans-serif; 
 } 
-:root { 
---background-color1: #fafaff; 
---background-color2: #ffffff; 
---background-color3: #ededed; 
---background-color4: #cad7fda4; 
---primary-color: #4b49ac; 
---secondary-color: #0c007d; 
---Border-color: #3f0097; 
---one-use-color: #3f0097; 
---two-use-color: #5500cb; 
-} 
+/* CSS Variables for colors */
+:root {
+  --background-color1: #fafaff; /* header background */
+  --background-color2: #ffffff; /* nav background */
+  --background-color3: #ededed; /* input/search background */
+  --background-color4: #cad7fda4; /* main body background */
+  --primary-color: #4b49ac;
+  --secondary-color: #0c007d;
+  --Border-color: #3f0097;
+  --one-use-color: #3f0097; /* box1 and box3 */
+  --two-use-color: #5500cb; /* box2 and box4 */
+}
+
+/*body styling*/
 body { 
 background-color: var(--background-color4); 
 max-width: 100%; 
 overflow-x: hidden; 
 } 
-
+/* Header styling: fixed top bar */
 header { 
 height: 70px; 
 width: 100vw; 
@@ -45,13 +48,14 @@ font-weight: 600;
 color: rgb(47, 141, 70); 
 } 
 
+/* Icons */
 .icn { 
 height: 30px; 
 } 
 .menuicn { 
 cursor: pointer; 
 } 
-
+/* Sections inside header: searchbar, message, logo container */
 .searchbar, 
 .message, 
 .logosec { 
@@ -67,7 +71,7 @@ display: none;
 .logosec { 
 gap: 60px; 
 } 
-
+/* Search bar input */
 .searchbar input { 
 width: 250px; 
 height: 42px; 
@@ -88,7 +92,7 @@ border-radius: 0px 50px 50px 0px;
 background-color: var(--secondary-color); 
 cursor: pointer; 
 } 
-
+/* Message icon with notification dot */
 .message { 
 gap: 40px; 
 position: relative; 
@@ -103,6 +107,8 @@ border-radius: 50%;
 left: 19px; 
 top: 8px; 
 } 
+
+/* Message icon with notification dot *//* Profile picture container */
 .dp { 
 height: 40px; 
 width: 40px; 
@@ -123,7 +129,7 @@ z-index: 1;
 .dpicn { 
 height: 42px; 
 } 
-
+/* Main content area */
 .main { 
 height: calc(100vh - 70px); 
 width: 100%; 
@@ -131,7 +137,7 @@ overflow-y: scroll;
 overflow-x: hidden; 
 padding: 40px 30px 30px 30px; 
 } 
-
+/* Custom scrollbar for main */
 .main::-webkit-scrollbar-thumb { 
 background-image: 
         linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50)); 
@@ -142,7 +148,7 @@ width: 5px;
 .main::-webkit-scrollbar-track { 
 background-color: #9e9e9eb2; 
 } 
-
+/* Container for boxes (dashboard cards) */
 .box-container { 
 display: flex; 
 justify-content: space-evenly; 
@@ -150,6 +156,8 @@ align-items: center;
 flex-wrap: wrap; 
 gap: 50px; 
 } 
+
+/* Sidebar navigation */
 .nav { 
 min-height: 91vh; 
 width: 250px; 
@@ -164,6 +172,8 @@ justify-content: space-between;
 overflow: hidden; 
 padding: 30px 0 20px 10px; 
 } 
+
+/* Scrollable nav content */
 .navcontainer { 
 height: calc(100vh - 70px); 
 width: 250px; 
@@ -178,6 +188,7 @@ display: none;
 .navclose { 
 width: 80px; 
 } 
+/* Navigation options */
 .nav-option { 
 width: 250px; 
 height: 60px; 
@@ -202,7 +213,7 @@ flex-direction: column;
 align-items: center; 
 gap: 30px; 
 } 
-
+/* Special highlight for first nav item */
 .option1 { 
 border-left: 5px solid #010058af; 
 background-color: var(--Border-color); 
@@ -213,6 +224,7 @@ cursor: pointer;
 border-left: 5px solid #010058af; 
 background-color: var(--Border-color); 
 } 
+/* Boxes styling */
 .box { 
 height: 130px; 
 width: 230px; 
@@ -228,7 +240,7 @@ transition: transform 0.3s ease-in-out;
 .box:hover { 
 transform: scale(1.08); 
 } 
-
+/* Different box colors */
 .box:nth-child(1) { 
 background-color: var(--one-use-color); 
 } 
@@ -259,6 +271,7 @@ font-size: 30px;
 letter-spacing: 3px; 
 } 
 
+/* Report container */
 .report-container { 
 min-height: 300px; 
 max-width: 1200px; 
@@ -295,6 +308,7 @@ border: none;
 cursor: pointer; 
 } 
 
+/* Report table/content styling */
 .report-body { 
 max-width: 1160px; 
 overflow-x: auto; 
@@ -350,7 +364,7 @@ border-radius: 4px;
         width: 800px; 
     } 
     } 
-    
+    /* nav becomes full width, searchbar hidden, responsive containers */
     @media screen and (max-width: 850px) { 
     .nav-img { 
         height: 30px; 
@@ -402,7 +416,7 @@ border-radius: 4px;
         border: 2px solid var(--secondary-color); 
     } 
     } 
-    
+    /* hide message, smaller logo, reduce gaps and font sizes */
     @media screen and (max-width: 490px) { 
     .message { 
         display: none; 
@@ -438,7 +452,7 @@ border-radius: 4px;
         width: 550px; 
     } 
     } 
-    
+    /* small button sizes, smaller text */
     @media screen and (max-width: 400px) { 
     .recent-Articles { 
         font-size: 17px; 
@@ -456,7 +470,7 @@ border-radius: 4px;
         height: 20px; 
     } 
     } 
-    
+     /* extra small screen adjustments */
     @media screen and (max-width: 320px) { 
     .recent-Articles { 
         font-size: 12px; 
