@@ -41,3 +41,16 @@ change the main.js to render react components
 010
 make sure your project is ready for production
 npm run build
+
+011
+Deploy on Vercel
+
+    Go to Vercel
+    and log in (GitHub login is easiest).
+    Click “New Project” → Import Git Repository → select your repo.
+    Vercel will detect it’s a React project and automatically set:
+    Framework Preset: Create React App
+    Build Command: npm run build
+    Output Directory: build
+    Click Deploy.
+    Vercel will build your app and give you a live URL like https://your-project-name.vercel.app.
