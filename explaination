@@ -1,0 +1,39 @@
+001
+npx create-react-app adminpanel
+
+002
+cd adminpanel
+
+003
+src > components > Header.js
+src > components > Main.js
+src > components > Nav.js
+
+004
+App.js= render dashboard components
+
+005
+index.js= render app components
+
+006
+create src > styles.css
+
+007
+components > pages > Articles.js
+components > pages > Dashboard.js
+components > pages > Institution.js
+components > pages > Profile.js
+components > pages > Report.js
+
+008
+How they all work together
+
+index.js → starts the app and renders <App />.
+App.js → decides the layout: <Nav /> on the side, <Header /> on top, <Main /> in center.
+Nav.js → sidebar menu, changes state in App to switch pages.
+Main.js → shows the content based on current page state.
+Header.js → top bar, static info like app title or user info.
+
+
+009
+change the main.js to render react components
